@@ -3,8 +3,6 @@ from itertools import groupby
 
 def get_range():
     range_input=[i for i in range(367479,893698)]
-
-    
     return range_input
     
 def has_doubles(n):
@@ -12,12 +10,9 @@ def has_doubles(n):
     if has_double:
         return n
 
-
 def check_proof(with_double,no_smaller_end):
     start_range=[i for i in range(367479,893698)]
-    print(len(start_range))
-    print(len(with_double))
-    print(len(no_smaller_end))
+
 
 
 def remove_smaller_ends(number):
@@ -43,15 +38,6 @@ def get_grouping(number):
             return number
       
 
-    
-
-
-
-
 result=[i for i in list(map(has_doubles,get_range())) if i is not None]
 result_end=[i for i in list(map(remove_smaller_ends,result)) if i is not None]
-print(result_end)
-
-
-
 check_proof(result,result_end)
